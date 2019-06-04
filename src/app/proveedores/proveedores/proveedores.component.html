@@ -1,0 +1,41 @@
+<div class="column"> 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>CIF</th>
+      <th>Dirección</th>
+      <th>Provincia</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Contacto</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let proveedor of proveedores">
+      <td>{{ proveedor.nombre }}</td>
+      <td>{{ proveedor.cif }}</td>
+      <td>{{ proveedor.direccion }}</td>
+      <td>{{ proveedor.provincia }}</td>
+      <td><a href="mailto:{{ proveedor.email }}">{{ proveedor.email }}</a></td>
+      <td>{{ proveedor.telefono }}</td>
+      <td>{{ proveedor.contacto }}</td>
+      <td>
+        <div class="field is-grouped is-grouped-multiline">
+        <p class="control">
+          <a class="button is-primary" href="#" >
+            <strong>Editar</strong>
+          </a>
+        </p>
+        <p class="control">
+          <a class="button is-danger" href="#">
+            <strong>Eliminar</strong>
+          </a>
+        </p>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

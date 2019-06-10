@@ -30,7 +30,6 @@ export class ProveedoresService {
     }
   ];
 
-
   getProveedores() {
     // return 'Mensaje desde el servicio';
     return this.proveedores;

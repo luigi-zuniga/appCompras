@@ -1,5 +1,5 @@
-<div class="column"> 
-<table class="table">
+<div class="col-lg-12"> 
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -22,17 +22,14 @@
       <td>{{ proveedor.telefono }}</td>
       <td>{{ proveedor.contacto }}</td>
       <td>
-        <div class="field is-grouped is-grouped-multiline">
-        <p class="control">
-          <a class="button is-primary" href="#" >
-            <strong>Editar</strong>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button is-danger" href="#">
-            <strong>Eliminar</strong>
-          </a>
-        </p>
+        <div class="btn btn-group">
+            <a href="#">
+              <button type="button" class="btn btn-outline-primary">Editar</button>
+            </a>
+            
+            <a href="#">
+              <button type="button" class="btn btn-outline-danger">Eliminar</button>
+            </a>
       </div>
       </td>
     </tr>

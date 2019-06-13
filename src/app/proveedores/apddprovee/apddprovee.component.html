@@ -58,10 +58,11 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-success" [disabled]="!formpro.valid"><i class="fas fa-plus-circle"></i> Añadir Proveedor</button>
-        <p class="alert alert-danger" *ngIf="formpro.valid">
-          Por favor complete todos los campos <i class="fa fa-exclamation" aria-hidden="true"></i>
-        </p>
+        <button type="submit" class="btn btn-success" [disabled]="!formpro.valid">
+          <i class="fas fa-plus-circle"></i> Añadir Proveedor</button>
+          <p class="alert alert-danger" *ngIf="formpro.valid">
+            Por favor complete todos los campos <i class="fa fa-exclamation" aria-hidden="true"></i>
+          </p>
         <hr>
         <pre> Estado Dirty: {{ formpro.controls.email.dirty }}</pre>
         <pre> Estado Pristine: {{ formpro.controls.email.pristine }}</pre>

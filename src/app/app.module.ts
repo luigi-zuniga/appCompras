@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,9 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { ApddproveeComponent } from './proveedores/apddprovee/apddprovee.component';
 
 const routes: Routes = [
-  { path:'', component: InicioComponent },
-  { path:'proveedores' , component: ProveedoresComponent },
-  { path: '**', component:InicioComponent }
+  { path: '', component: InicioComponent },
+  { path: 'proveedores', component: ProveedoresComponent },
+  { path: 'add-proveedores', component: ApddproveeComponent },
+  { path: '**', component: InicioComponent}
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [ProveedoresService],
   bootstrap: [AppComponent]

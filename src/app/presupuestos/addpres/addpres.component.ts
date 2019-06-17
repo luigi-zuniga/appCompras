@@ -7,6 +7,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
   templateUrl: './addpres.component.html',
   styleUrls: ['./addpres.component.css']
 })
+
 export class AddpresComponent implements OnInit {
   presupuestoForm: FormGroup;
   presupuesto: any;
@@ -28,6 +29,7 @@ export class AddpresComponent implements OnInit {
       iva: this.iva,
       total: this.total
     });
+
     this.onChanges();
   }
 
@@ -36,7 +38,7 @@ export class AddpresComponent implements OnInit {
   }
 
   onChanges(): void {
-    this.presupuestoForm.valueChanges.subscribe(valor =>{
+    this.presupuestoForm.valueChanges.subscribe( valor => {
       this.base = valor.base;
       this.tipo = valor.tipo;
       this.presupuestoForm.value.iva = this.base * this.tipo;
@@ -46,15 +48,15 @@ export class AddpresComponent implements OnInit {
 
   savePresupuesto() {
     const savePresupuesto = {
-      proveedor: this.presupuestoForm.get('proveedor').value,
-      fecha: this.presupuestoForm.get('fecha').value,
-      concepto: this.presupuestoForm.get('concepto').value,
-      base: this.presupuestoForm.get('base').value,
-      tipo: this.presupuestoForm.get('tipo').value,
-      iva: this.presupuestoForm.get('iva').value,
-      total: this.presupuestoForm.get('total').value
+      concepto:   this.presupuestoForm.get('concepto').value,
+      base:   this.presupuestoForm.get('base').value,
+      fecha:  this.presupuestoForm.get('fecha').value,
+      iva:    this.presupuestoForm.get('iva').value,
+      tipo:   this.presupuestoForm.get('tipo').value,
+      total:  this.presupuestoForm.get('total').value,
+      proveedor:  this.presupuestoForm.get('proveedor').value
     };
+
     return savePresupuesto;
   }
-
 }
